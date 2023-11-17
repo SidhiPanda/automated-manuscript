@@ -17,7 +17,7 @@ def extract_text_and_style_docx(file_path, csv_writer, style_list):
                     style_list.append(style)
 
                 if style != prev_style:
-                    csv_writer.writerow([text, style, style_list.index(style)])
+                    csv_writer.writerow([str(text), style, style_list.index(style)])
 
                 prev_style = style
 
